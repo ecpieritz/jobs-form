@@ -9,14 +9,14 @@ const Pdf = (props) => {
     <>
       <h3>Após preencher o formulário, clique abaixo para salvar em PDF</h3>
       <div className="Form pdf-form" ref={ref}>
-        <p>Vaga: <span>{props.title}</span></p>
-        <p>Salário: <span>{props.salary}</span></p>
-        <p>Atividades: <span>{props.activities}</span></p>
-        <p>Benefícios: <span>{props.benefits}</span></p>
-        <p>Etapas do processo: <span>{props.processSteps}</span></p>
-        <p>Habilidades Necessárias: <span>{props.skills}</span></p>
-        <p>Experiência necessária: <span>{props.experienceRequired}</span></p>
-        <p>Observações extras (se preciso):<span>{props.observations}</span></p>
+        <h1>{props.title}</h1>
+        <p>Salário: <br/><span>{props.salary}</span></p>
+        <p>Atividades: <br/><span>{props.activities}</span></p>
+        <p>Benefícios: <br/><span>{props.benefits}</span></p>
+        <p>Etapas do processo: <br/><span>{props.processSteps}</span></p>
+        <p>Habilidades Necessárias: <br/><span>{props.skills}</span></p>
+        <p>Experiência necessária: <br/><span>{props.experienceRequired}</span></p>
+        <p>Observações extras (se preciso):<br/><span>{props.observations}</span></p>
       </div>
 
       <PDF targetRef={ref} filename={props.title}>

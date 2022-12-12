@@ -4,6 +4,7 @@
   padding: 20px 50px;
   background-color: #fff;
   border-radius: 12px;
+  width: 100%;
 }
 
 .job-form h1{
@@ -15,4 +16,8 @@
   font-weight: 600;  
   line-height: 1.2;
   margin-top: 10px;
+}
+
+.final-pdf{
+  margin: 0 auto;
 }

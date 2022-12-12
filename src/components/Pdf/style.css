@@ -1,0 +1,28 @@
+h3 {
+  margin: 60px auto;
+}
+
+.Form.pdf-form {
+  width: 100%;
+  max-height: 100%;
+  padding: 60px;
+}
+
+.Form.pdf-form h1 {
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.Form.pdf-form p {
+  font-weight: 600;
+  width: 100%;
+}
+
+.Form.pdf-form p span {
+  font-weight: 400;
+  
+}
+@page {
+    width: 100%;
+    
+}

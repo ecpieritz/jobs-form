@@ -75,7 +75,7 @@ class Form extends Component {
                   <textarea onChange={this.onChange('observations')} className="form-control" id="job-observations" rows="3"></textarea>
                 </div>
               </form>
-              <Pdf title={this.state.jobTitle} 
+              <Pdf className="final-pdf" title={this.state.jobTitle} 
                 salary={this.state.salary}
                 activities={this.state.activities}
                 benefits={this.state.benefits}
