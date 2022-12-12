@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/jobs-form/static/css/main.3358d674.css",
+    "main.js": "/jobs-form/static/js/main.b263fb8a.js",
+    "static/js/236.fb0df2c3.chunk.js": "/jobs-form/static/js/236.fb0df2c3.chunk.js",
+    "static/js/703.a343ea06.chunk.js": "/jobs-form/static/js/703.a343ea06.chunk.js",
+    "static/js/788.07a9df83.chunk.js": "/jobs-form/static/js/788.07a9df83.chunk.js",
+    "static/js/787.01d57d67.chunk.js": "/jobs-form/static/js/787.01d57d67.chunk.js",
+    "index.html": "/jobs-form/index.html",
+    "main.3358d674.css.map": "/jobs-form/static/css/main.3358d674.css.map",
+    "main.b263fb8a.js.map": "/jobs-form/static/js/main.b263fb8a.js.map",
+    "236.fb0df2c3.chunk.js.map": "/jobs-form/static/js/236.fb0df2c3.chunk.js.map",
+    "703.a343ea06.chunk.js.map": "/jobs-form/static/js/703.a343ea06.chunk.js.map",
+    "788.07a9df83.chunk.js.map": "/jobs-form/static/js/788.07a9df83.chunk.js.map",
+    "787.01d57d67.chunk.js.map": "/jobs-form/static/js/787.01d57d67.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3358d674.css",
+    "static/js/main.b263fb8a.js"
+  ]
+}
