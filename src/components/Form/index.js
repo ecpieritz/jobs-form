@@ -5,12 +5,21 @@ class Form extends Component {
   state = {
     jobTitle: '',
     salary: '',
-    activities: [],
-    benefits: [],
-    processSteps: [],
-    skills: [],
+    activities: '',
+    benefits: '',
+    processSteps: '',
+    skills: '',
     experienceRequired: '',
     jobSubmitted: false
+  }
+
+  onChange = input => event =>{
+    this.setState({
+      [input]:event.target.value,
+    })
+  }
+
+  handleChange = (e) => {
   }
 
   render() {
@@ -19,65 +28,35 @@ class Form extends Component {
         <h1>Formulário para nova vaga</h1>
         <form>
           <div className="form-group">
-            <label for="job-title">Título do Cargo</label>
-            <input type="text" className="form-control" id="job-title" placeholder="Exemplo: Auxiliar de Confeiteiro" />
+            <label htmlFor="job-title">Título do Cargo</label>
+            <input onChange={this.onChange('jobTitle')} type="text" className="form-control " id="job-title" placeholder="Exemplo: Auxiliar de Confeiteiro" required />
           </div>
           <div className="form-group">
-            <label for="job-salary">Salário</label>
-            <input type="text" className="form-control" id="job-salary" placeholder="Exemplo: R$ 1800,00" />
+            <label htmlFor="job-salary">Salário</label>
+            <input onChange={this.onChange('salary')} type="text" className="form-control " id="job-salary" placeholder="Exemplo: R$ 1800,00" required />
           </div>
           <div className="form-group">
-            <label for="job-activities">Atividades do cargo<span><br/>Após clicar no 1º item, segure CTRL para selecionar mais itens</span></label>
-            <select multiple className="form-control" id="job-activities">
-              <option>Atendimento ao público</option>
-              <option>Monitorar estoques de ingredientes de panificação</option>
-              <option>Preparar uma ampla variedade de produtos doces e salgados</option>
-              <option>Criar novas receitas de doces e salgados</option>
-              <option>Verificar a qualidade do material</option>
-              <option>Verificar a condição dos equipamentos e dispositivos usados na cozinha</option>
-              <option>Orientar funcionários menos experientes</option>
-              <option>Manter a organização da cozinha</option>
-            </select>
+            <label htmlFor="job-activities">Atividades que o cargo exerce</label>
+            <textarea onChange={this.onChange('activitie')} className="form-control" id="job-activities" rows="3" required></textarea>
           </div>
           <div className="form-group">
-            <label for="job-benefits">Benefícios do Cargo<span><br/>Após clicar no 1º item, segure CTRL para selecionar mais itens</span></label>
-            <select multiple className="form-control" id="job-benefits">
-              <option>VA/VR</option>
-              <option>Vale transporte</option>
-              <option>Gympass</option>
-              <option>Assistência médica</option>
-              <option>Seguro de vida</option>
-              <option>Day off no seu aniversário</option>
-              <option>CLT</option>
-              <option>PJ</option>
-            </select>
+            <label htmlFor="job-benefits">Benefícios do cargo</label>
+            <textarea onChange={this.onChange('benefits')} className="form-control" id="job-benefits" rows="3" required></textarea>
           </div>
           <div className="form-group">
-            <label for="process-step">Etapas da vaga<span><br/>Após clicar no 1º item, segure CTRL para selecionar mais itens</span></label>
-            <select multiple className="form-control" id="process-step">
-              <option>Análise do currículo</option>
-              <option>Entrevista com o RH</option>
-              <option>Entrevista com o gestor</option>
-              <option>Teste</option>
-              <option>Contratação</option>
-            </select>
+            <label htmlFor="process-steps">Etapas do processo</label>
+            <textarea onChange={this.onChange('processSteps')} className="form-control" id="process-steps" rows="3" required></textarea>
           </div>
           <div className="form-group">
-            <label for="job-skills">Habilidades necessárias<span><br/>Após clicar no 1º item, segure CTRL para selecionar mais itens</span></label>
-            <select multiple className="form-control" id="job-skills">
-              <option>Criação de doces</option>
-              <option>Criação de salgados</option>
-              <option>Gestão de grupo</option>
-              <option>Gestão de produtos</option>
-              <option>Administração</option>
-            </select>
+            <label htmlFor="job-skills">Habilidades Necessárias</label>
+            <textarea onChange={this.onChange('skills')} className="form-control" id="job-job-skills" rows="3" required></textarea>
           </div>
           <div className="form-group">
-            <label for="job-experience">Experiência necessária</label>
-            <input type="text" className="form-control" id="job-experience" placeholder="Exemplo: 1 ano" />
+            <label htmlFor="job-experience">Experiência necessária</label>
+            <input onChange={this.onChange('experienceRequired')} type="text" className="form-control " id="job-experience" placeholder="Exemplo: 1 ano" required />
           </div>
           <div className="form-group">
-            <label for="job-observations">Observações extras</label>
+            <label htmlFor="job-observations">Observações extras</label>
             <textarea className="form-control" id="job-observations" rows="3"></textarea>
           </div>
           <button type="submit" className="btn btn-info">Enviar</button>
