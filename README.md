@@ -2,9 +2,9 @@
 
 ## 🖥 Preview
 <p align = "center">
-  <img src = "xxx" width = "700" height = "auto">
-  <img src = "xxx" width = "350" height = "auto">
-  <img src = "xxx" width = "350" height = "auto">
+  <img src = "https://github.com/ecpieritz/jobs-form/blob/main/public/print-01.jpg?raw=true" width = "700" height = "auto">
+  <img src = "https://github.com/ecpieritz/jobs-form/blob/main/public/print-02.jpg?raw=true" width = "350" height = "auto">
+  <img src = "https://github.com/ecpieritz/jobs-form/blob/main/public/print-03.jpg?raw=true" width = "350" height = "auto">
 </p>
 
 ## 📖 About
