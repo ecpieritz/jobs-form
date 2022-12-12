@@ -11,6 +11,7 @@ class Form extends Component {
     processSteps: '',
     skills: '',
     experienceRequired: '',
+    observations: '',
     jobSubmitted: false
   }
 
@@ -37,45 +38,55 @@ class Form extends Component {
       <div className="job-form">
         <h1>Formulário para nova vaga</h1>
 
-        { !this.state.submitForm ? 
+        {!this.state.submitForm ?
           (
-            <form>
-            <div className="form-group">
-              <label htmlFor="job-title">Título do Cargo</label>
-              <input onChange={this.onChange('jobTitle')} type="text" className="form-control " id="job-title" placeholder="Exemplo: Auxiliar de Confeiteiro" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="job-salary">Salário</label>
-              <input onChange={this.onChange('salary')} type="text" className="form-control " id="job-salary" placeholder="Exemplo: R$ 1800,00" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="job-activities">Atividades que o cargo exerce</label>
-              <textarea onChange={this.onChange('activitie')} className="form-control" id="job-activities" rows="3" required></textarea>
-            </div>
-            <div className="form-group">
-              <label htmlFor="job-benefits">Benefícios do cargo</label>
-              <textarea onChange={this.onChange('benefits')} className="form-control" id="job-benefits" rows="3" required></textarea>
-            </div>
-            <div className="form-group">
-              <label htmlFor="process-steps">Etapas do processo</label>
-              <textarea onChange={this.onChange('processSteps')} className="form-control" id="process-steps" rows="3" required></textarea>
-            </div>
-            <div className="form-group">
-              <label htmlFor="job-skills">Habilidades Necessárias</label>
-              <textarea onChange={this.onChange('skills')} className="form-control" id="job-job-skills" rows="3" required></textarea>
-            </div>
-            <div className="form-group">
-              <label htmlFor="job-experience">Experiência necessária</label>
-              <input onChange={this.onChange('experienceRequired')} type="text" className="form-control " id="job-experience" placeholder="Exemplo: 1 ano" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="job-observations">Observações extras</label>
-              <textarea className="form-control" id="job-observations" rows="3"></textarea>
-            </div>
-            <button onClick={this.submitForm} type="submit" className="btn btn-info">Enviar</button>
-          </form>
-          ): (
-            <Pdf />
+            <>
+              <form>
+                <div className="form-group">
+                  <label htmlFor="job-title">Título do Cargo</label>
+                  <input onChange={this.onChange('jobTitle')} type="text" className="form-control " id="job-title" placeholder="Exemplo: Auxiliar de Confeiteiro" required />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="job-salary">Salário</label>
+                  <input onChange={this.onChange('salary')} type="text" className="form-control " id="job-salary" placeholder="Exemplo: R$ 1800,00" required />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="job-activities">Atividades que o cargo exerce</label>
+                  <textarea onChange={this.onChange('activities')} className="form-control" id="job-activities" rows="3" required></textarea>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="job-benefits">Benefícios do cargo</label>
+                  <textarea onChange={this.onChange('benefits')} className="form-control" id="job-benefits" rows="3" required></textarea>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="process-steps">Etapas do processo</label>
+                  <textarea onChange={this.onChange('processSteps')} className="form-control" id="process-steps" rows="3" required></textarea>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="job-skills">Habilidades Necessárias</label>
+                  <textarea onChange={this.onChange('skills')} className="form-control" id="job-job-skills" rows="3" required></textarea>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="job-experience">Experiência necessária</label>
+                  <input onChange={this.onChange('experienceRequired')} type="text" className="form-control " id="job-experience" placeholder="Exemplo: 1 ano" required />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="job-observations">Observações extras</label>
+                  <textarea onChange={this.onChange('observations')} className="form-control" id="job-observations" rows="3"></textarea>
+                </div>
+              </form>
+              <Pdf title={this.state.jobTitle} 
+                salary={this.state.salary}
+                activities={this.state.activities}
+                benefits={this.state.benefits}
+                processSteps={this.state.processSteps}
+                skills={this.state.skills}
+                experienceRequired={this.state.experienceRequired}
+                observations={this.state.observations} />
+            </>
+          ) : (
+            <>
+            </>
           )
         }
       </ div>
